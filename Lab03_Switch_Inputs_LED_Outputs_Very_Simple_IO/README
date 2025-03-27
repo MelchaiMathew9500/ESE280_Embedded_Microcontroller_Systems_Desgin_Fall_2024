@@ -1,1 +1,55 @@
+Overview
+
+This lab explores basic digital input and output functionality using the AVR128DB48 microcontroller. The tasks focus on using switches as inputs and LEDs as outputs while utilizing internal pull-up resistors.
+
+Tasks
+
+1. SW0_controls_LED0_mod.asm
+
+Description: This program configures a switch as an input with an internal pull-up resistor. When the switch is pressed, it completes the circuit and turns on an LED connected to an output pin.
+
+Key Features:
+
+Uses an internal pull-up resistor to ensure a defined logic level when the switch is not pressed.
+
+Configures the LED output to be controlled by the switch state.
+
+2. ex_PB_controls_ex_LED
+
+Description: Similar to the first task, this program implements a pushbutton switch with an internal pull-up resistor to control an LED.
+
+Key Features:
+
+Pushbutton input is configured using an internal pull-up resistor.
+
+Pressing the pushbutton turns on an external LED.
+
+Learning Outcomes
+
+Understanding how to use internal pull-up resistors in microcontrollers.
+
+Configuring GPIO pins for digital input and output operations.
+
+Implementing basic switch debouncing concepts in embedded systems.
+
+Usage Instructions
+
+Assemble and upload the provided .asm files to the AVR128DB48 microcontroller.
+
+Connect the circuit:
+
+Ensure the switch/pushbutton is properly wired with the designated input pin.
+
+Connect the LED to the assigned output pin with an appropriate current-limiting resistor.
+
+Observe the LED turning on when the switch/pushbutton is pressed.
+
+Notes
+
+If the LED does not turn on as expected, verify that the pull-up resistor is correctly configured.
+
+Check wiring and ensure the microcontroller is correctly powered.
+
+This lab provides fundamental knowledge for working with digital I/O, forming the basis for more complex embedded system applications.
+
 
