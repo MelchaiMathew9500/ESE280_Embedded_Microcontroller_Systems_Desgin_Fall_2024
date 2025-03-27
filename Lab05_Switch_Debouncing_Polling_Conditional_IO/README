@@ -1,1 +1,75 @@
+Overview
+
+This lab focuses on implementing switch debouncing techniques, polling mechanisms, and conditional input/output handling using the AVR128DB48 microcontroller. The tasks involve controlling an 8-bar LED graph with DIP switches, counting pushbutton transitions, and improving accuracy using both software and hardware debounce techniques.
+
+Tasks
+
+1. conditional_input_sftwe.asm
+
+Description: This program allows an 8-DIP switch to control an 8-bar LED graph. However, the LEDs update only when a pushbutton press is detected. A flip-flop mechanism ensures stable data capture.
+
+Key Features:
+
+Uses DIP switches for input control.
+
+Pushbutton acts as a trigger to update the LED graph.
+
+Implements a flip-flop for stable input reading.
+
+2. pb_bounce_count_bin.asm
+
+Description: This program counts the number of 0-to-1 transitions detected on a pushbutton and displays the count in binary on an 8-bar LED graph. However, mechanical bouncing of the pushbutton increases the count due to unintended transitions.
+
+Key Features:
+
+Detects and counts rising-edge transitions of a pushbutton.
+
+Mechanical bounce causes additional unintended increments.
+
+Displays the count in binary on an 8-bar LED graph.
+
+3. pb_hdwe_sfwe_debounce_count_bin.asm
+
+Description: This task improves upon the previous by implementing both software (delays) and hardware (flip-flop) debouncing techniques to provide an accurate count of actual button presses. The count is displayed in binary on an 8-bar LED graph.
+
+Key Features:
+
+Uses software delay to filter out bounce effects.
+
+Incorporates a hardware flip-flop for stable transition detection.
+
+Provides a more accurate count of pushbutton presses.
+
+Displays the count in binary on an 8-bar LED graph.
+
+Learning Outcomes
+
+Understanding the effects of switch bouncing and methods to mitigate it.
+
+Implementing polling-based input handling.
+
+Utilizing software and hardware techniques to improve input accuracy.
+
+Applying conditional I/O logic to control outputs effectively.
+
+Usage Instructions
+
+Assemble and upload the provided .asm files to the AVR128DB48 microcontroller.
+
+Connect the necessary components:
+
+DIP switches and pushbutton to designated input pins.
+
+8-bar LED graph to the assigned output pins.
+
+Observe the system behavior and analyze the differences between each implementation.
+
+Notes
+
+If unexpected counts appear, verify the debounce implementation.
+
+Ensure correct wiring for DIP switches, pushbuttons, and LEDs.
+
+This lab demonstrates real-world input handling challenges and solutions in embedded systems.
+
 
