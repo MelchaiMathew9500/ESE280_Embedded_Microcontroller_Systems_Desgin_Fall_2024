@@ -1,1 +1,77 @@
+Overview
 
+This lab focuses on utilizing the AVR128DB48 microcontroller's USART (Universal Synchronous and Asynchronous Receiver-Transmitter) to communicate with a serial LCD screen. The tasks involve transmitting characters and messages using a standard baud rate, as well as implementing a manual timing approach for serial communication without hardware USART.
+
+Tasks
+
+1. USART3_asynch_test.asm
+
+Description: This program continuously transmits the alphabet using the AVR128DB48's USART. When it reaches 'Z', it loops back to 'A'. The transmission follows the standard 9600 baud rate with 8N1 format (8 data bits, no parity, 1 stop bit). It is designed for output on a serial LCD screen.
+
+Key Features:
+
+Uses USART3 for serial communication.
+
+Outputs the alphabet in a continuous loop.
+
+Configured for 9600 baud rate with 8N1 format.
+
+Compatible with serial LCD displays.
+
+2. USART_write_message.asm
+
+Description: This program sends a predefined message—"Hello World\nWhat happens now"—once over USART3, using the same baud rate and format as the previous task.
+
+Key Features:
+
+Outputs a fixed text message instead of looping through characters.
+
+Uses USART3 for serial transmission.
+
+Configured for 9600 baud rate with 8N1 format.
+
+Designed for serial LCD display output.
+
+3. write_SerLCD.asm
+
+Description: This program achieves the same functionality as USART_write_message.asm but without utilizing USART hardware. Instead, it implements manual time delays to approximate the correct transmission timing at 9600 baud, following the 8N1 format. A register is loaded with a letter, and a loop runs continuously to output one character at a time.
+
+Key Features:
+
+Implements software-based serial communication.
+
+Uses manual timing delays instead of USART hardware.
+
+Outputs a predefined message to a serial LCD.
+
+Maintains 9600 baud rate with 8N1 format.
+
+Learning Outcomes
+
+Understanding USART operation and asynchronous serial communication.
+
+Implementing serial data transmission using hardware USART.
+
+Developing a software-based approach for serial communication.
+
+Configuring and utilizing serial LCD displays with microcontroller output.
+
+Usage Instructions
+
+Assemble and upload the .asm files to the AVR128DB48 microcontroller.
+
+Connect the serial LCD to the appropriate USART pins (for USART-based tasks) or general I/O pins (for manual delay-based task).
+
+Observe the transmitted data on the serial LCD.
+
+Compare hardware USART transmission to manual timing-based transmission.
+
+Notes
+
+Ensure the LCD is properly configured to receive serial data at 9600 baud, 8N1.
+
+If characters are not displaying correctly, verify timing settings in the software delay-based implementation.
+
+Check wiring connections between the microcontroller and the serial LCD.
+
+This lab provides hands-on experience with serial communication using both hardware and software approaches for embedded system applications.
