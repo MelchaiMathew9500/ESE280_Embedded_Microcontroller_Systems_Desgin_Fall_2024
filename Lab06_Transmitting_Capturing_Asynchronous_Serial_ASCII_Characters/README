@@ -1,1 +1,77 @@
+Overview
 
+This lab explores asynchronous serial communication using the AVR128DB48 microcontroller. The tasks focus on transmitting ASCII characters at a standard baud rate, utilizing polling and edge-triggered mechanisms while handling pushbutton debounce issues. Additionally, the lab demonstrates debugging and iterative improvements in firmware development.
+
+Tasks
+
+1. adjusted_write_ASCII_character.asm
+
+Description: This program transmits the letter 'U' via asynchronous serial communication at a baud rate of 9600, using an 8N1 format (8 data bits, no parity, 1 stop bit). Manually coded delays ensure proper timing for correct interpretation by a terminal application like TeraTerm.
+
+Key Features:
+
+Outputs the ASCII character 'U' continuously.
+
+Uses manually implemented timing to match the expected baud rate.
+
+Designed to be read correctly by serial monitoring tools such as TeraTerm.
+
+2. cond_write_ASCII_character.asm
+
+Description: This program transmits an ASCII character based on an 8-DIP switch input. The selected character is also displayed on an LED bar graph. The transmission only occurs when a pushbutton detects an edge transition, with proper debouncing to ensure accuracy.
+
+Key Features:
+
+Reads an 8-bit ASCII character from DIP switches.
+
+Displays the character on an LED bar graph.
+
+Transmits the character over serial communication only when a pushbutton is pressed.
+
+Implements debouncing to filter out unintended pushbutton transitions.
+
+3. write_ASCII_character.asm
+
+Description: This is the original prelab implementation of cond_write_ASCII_character.asm, which was intended to perform the same function but contained errors preventing successful compilation. It is included to document the debugging and troubleshooting process in firmware development.
+
+Key Features:
+
+Demonstrates early-stage implementation and debugging challenges.
+
+Provides insight into iterative development and problem-solving.
+
+Learning Outcomes
+
+Understanding asynchronous serial communication and baud rate configurations.
+
+Implementing software-based timing for serial transmission.
+
+Handling switch input and pushbutton debouncing for reliable edge detection.
+
+Debugging and refining embedded firmware through iterative development.
+
+Usage Instructions
+
+Assemble and upload the .asm files to the AVR128DB48 microcontroller.
+
+Connect the necessary hardware:
+
+DIP switches for ASCII input.
+
+LED bar graph for visual character representation.
+
+Pushbutton for edge-triggered transmission.
+
+Serial interface for character output (e.g., TeraTerm).
+
+Observe serial output and analyze character transmission behavior.
+
+Notes
+
+Ensure the correct baud rate settings (9600, 8N1) in the serial terminal.
+
+If characters are not displayed correctly, verify the timing adjustments.
+
+Check DIP switch connections and pushbutton debounce handling.
+
+This lab provides practical experience with serial communication and embedded system debugging techniques.
